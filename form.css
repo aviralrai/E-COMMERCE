@@ -6,7 +6,11 @@ body {
     rgba(246,247,249,0.8),
     rgba(246,247,249,0.8)),
     url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/sky-clouds-cloudy-mountain.jpg) no-repeat center center fixed;
+    background-image: url(img/abstract-art-artistic-1020315.jpg);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
 }
 
 .container {
@@ -20,8 +24,8 @@ body {
   width: 430px;
   background:
     linear-gradient(
-    rgba(35,43,85,0.75),
-    rgba(35,43,85,0.95)),
+    rgba(70, 11, 11,0.75),
+    rgba(0, 0, 0,0.95)),
     url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/clouds-cloudy-forest-mountain.jpg) no-repeat center center;
   background-size: cover;
   margin-left: auto;
