@@ -1,7 +1,7 @@
 const express = require('express');
 const mysql = require("mysql");
 const db = require("../database");
-const app = express.Router();
+const app = express.Router({mergeParams:true});
 
 app.post("/signup",(req,res)=>{
     const {email,password,fullname} = req.body;
