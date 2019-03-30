@@ -20,7 +20,7 @@ body {
 }
 
 .frame {
-  height: 575px;
+  height: 500px;
   width: 430px;
   background:
     linear-gradient(
@@ -321,8 +321,13 @@ label {
 }
 
 .btn-signin {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  color: white;
   float: left;
-  padding-top: 8px;
+  font-size: 13px;
+  padding-top: auto;
   width: 100%;
   height: 35px;
 	border: none;
