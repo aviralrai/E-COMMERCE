@@ -1,0 +1,26 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "A fully functional e-commerce website. This is a DBMS project.",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aviralrai/E-COMMERCE.git"
+  },
+  "author": "Aviral Rai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aviralrai/E-COMMERCE/issues"
+  },
+  "homepage": "https://github.com/aviralrai/E-COMMERCE#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}

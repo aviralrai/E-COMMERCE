@@ -6,7 +6,7 @@ body {
     rgba(246,247,249,0.8),
     rgba(246,247,249,0.8)),
     url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/sky-clouds-cloudy-mountain.jpg) no-repeat center center fixed;
-    background-image: url(img/abstract-art-artistic-1020315.jpg);
+    background-image: url("../img/abstract-art-artistic-1020315.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
