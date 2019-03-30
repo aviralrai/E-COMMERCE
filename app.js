@@ -15,9 +15,6 @@ app.get("/",(req,res)=>{
     res.render("form.ejs")
 })
 
-app.get("/home",(req,res)=>{
-    res.render("home.ejs",{user:{}});
-})
 
 app.get("/home",(req,res)=>{
 	res.render("home.ejs");
