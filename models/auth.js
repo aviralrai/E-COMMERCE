@@ -10,7 +10,7 @@ app.post("/signup",(req,res)=>{
         if(err)
             res.redirect("/");
         else{
-            res.render("home.ejs",{user: req.body});
+            res.render("navbar.ejs",{user: req.body});
         }
     })
 })
@@ -25,7 +25,7 @@ app.post("/signin",(req,res)=>{
         }else{
             if(result[0]){
                 if(password === result[0].password){
-                    res.render("home.ejs",{user: result[0]});
+                    res.render("navbar.ejs",{user: result[0]});
                 }else{
                     res.redirect("/");
                 }
