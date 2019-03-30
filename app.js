@@ -15,12 +15,11 @@ app.get("/",(req,res)=>{
     res.render("form.ejs")
 })
 
-<<<<<<< HEAD
-=======
+
 app.get("/home",(req,res)=>{
     res.render("home.ejs",{user:{}});
 })
->>>>>>> b51c4b0c8047c86f71e030a4bc54a15e9034ac79
+
 
 app.get("/home",(req,res)=>{
 	res.render("home.ejs");
