@@ -1,8 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+const mysql = require("mysql");
 const port = process.env.port||3000;
-
+const db = require("./database");
 app.use(express.static("staticFiles"));
 app.use(bodyParser.urlencoded({extended:true}));
 
@@ -17,7 +18,12 @@ app.get("/",(req,res)=>{
 
 
 app.get("/home",(req,res)=>{
-	res.render("navbar.ejs");
+    var query = 'select * from items';
+    db.query(query,(error,result,fields)=>{
+        if(error)
+            throw error;
+        return res.render("home.ejs",{data:result});
+    })
 })
 
 

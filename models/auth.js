@@ -25,9 +25,7 @@ app.post("/signin",(req,res)=>{
         }else{
             if(result[0]){
                 if(password === result[0].password){
-
-                    return res.render("navbar.ejs",{user: result[0]});
-
+                    return res.redirect("/home");
                 }else{
                     return res.redirect("/");
                 }

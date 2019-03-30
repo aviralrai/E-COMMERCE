@@ -1,0 +1,20 @@
+.image{
+    width: 300px;
+    height: 270px;
+}
+
+.image-body{
+    height: 300px;
+    margin-left: 10px;
+}
+.image:hover{
+    transform: scale(1.05);
+}
+
+body{
+    margin-top: 40px;
+}
+
+.caption{
+    text-align: center;
+}
