@@ -19,6 +19,10 @@ app.get("/home",(req,res)=>{
     res.send();
 })
 
+app.get("/home",(req,res)=>{
+	res.render("home.ejs");
+})
+
 
 app.listen(port,()=>{
     console.log(port+" is listening...");
