@@ -11,6 +11,10 @@ app.get("/",(req,res)=>{
     res.render("form.ejs");
 })
 
+app.get("/home",(req,res)=>{
+	res.render("home.ejs");
+})
+
 
 app.listen(port,()=>{
     console.log(port+" is listening...");
