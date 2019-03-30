@@ -10,7 +10,7 @@ app.post("/signup",(req,res)=>{
         if(err)
             res.redirect("/");
         else{
-            res.redirect("/home",{name: fullname});
+            res.render("home.ejs",{user: req.body});
         }
     })
 })
@@ -21,12 +21,12 @@ app.post("/signin",(req,res)=>{
     db.query(query,(err,result,fields)=>{
         if(err){
             console.log(err);
-            res.redirect("/",{error:"Error while signing in"});
+            res.redirect("/");
         }else{
             if(password === result[0].password){
-                res.send("Welcome "+result[0].fullname);
+                res.render("home.ejs",{user: result[0]});
             }else{
-                res.redirect("/",{error:"Wrong username or password"});
+                res.redirect("/");
             }
         }
     })

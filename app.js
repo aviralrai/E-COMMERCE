@@ -16,7 +16,7 @@ app.get("/",(req,res)=>{
 })
 
 app.get("/home",(req,res)=>{
-    res.send();
+    res.render("home.ejs",{user:{}});
 })
 
 app.get("/home",(req,res)=>{
