@@ -1,7 +1,7 @@
 const express = require('express');
 const mysql = require("mysql");
 const db = require("../database");
-const app = express.Router({mergeParams:true});
+const app = express.Router();
 
 app.post("/signup",(req,res)=>{
     const {email,password,fullname} = req.body;
@@ -23,13 +23,20 @@ app.post("/signin",(req,res)=>{
             console.log(err);
             res.redirect("/");
         }else{
-            if(password === result[0].password){
-                res.render("home.ejs",{user: result[0]});
-            }else{
-                res.redirect("/");
+            if(result[0]){
+                if(password === result[0].password){
+                    res.render("home.ejs",{user: result[0]});
+                }else{
+                    res.redirect("/");
+                }
             }
+            res.redirect("/");
         }
     })
+})
+
+app.get("/logout",(req,res)=>{
+    res.redirect("/");
 })
 
 module.exports = app;
