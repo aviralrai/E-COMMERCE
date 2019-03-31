@@ -10,12 +10,18 @@
   <%include navbar.ejs%>
   <div class="row">
     <% data.forEach(function(data){%>
-          <div class="col-xs-12 col-sm-6 col-md-3 image-body">
+          <div class="col-xs-12 col-sm-6 col-md-3 content">
               <div class="thumbnail">
+                
                   <img src='<%=data["link"]%>' class="image">
-                  <div class="caption">
-                      <p class="title"><%=data["Name"]%></p>
-                  </div>
+                  <div class="content-overlay"></div>
+                    <div class="content-details fadeIn-top">
+                      <h3>This is a title</h3>
+                      <p>This is a short description</p>
+                    </div>
+                    <div class="caption">
+                        <p class="title"><%=data["Name"]%></p>
+                    </div>
                   <a href='/kamp/<%=data["itemId"]%>' class="btn btn-primary btn-block">VIEW DETAILS</a>
               </div>
           </div>
