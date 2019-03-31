@@ -7,6 +7,8 @@ const db = require("./database");
 app.use(express.static("staticFiles"));
 app.use(bodyParser.urlencoded({extended:true}));
 
+user = {}
+
 //importing other routes
 
 const auth = require("./models/auth");
@@ -22,7 +24,7 @@ app.get("/home",(req,res)=>{
     db.query(query,(error,result,fields)=>{
         if(error)
             throw error;
-        return res.render("home.ejs",{data:result});
+        return res.render("home.ejs",{user: user,data:result});
     })
 })
 

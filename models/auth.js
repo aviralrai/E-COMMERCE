@@ -2,7 +2,6 @@ const express = require('express');
 const mysql = require("mysql");
 const db = require("../database");
 const app = express.Router();
-
 app.post("/signup",(req,res)=>{
     const {email,password,fullname} = req.body;
     var query = mysql.format("insert into user(username,password,fullname) values(?,?,?)",[email,password,fullname]);
@@ -15,6 +14,7 @@ app.post("/signup",(req,res)=>{
     })
 })
 
+
 app.post("/signin",(req,res)=>{
     const {username,password} = req.body;
     var query = mysql.format("select * from user where username=?",[username]);
@@ -25,6 +25,7 @@ app.post("/signin",(req,res)=>{
         }else{
             if(result[0]){
                 if(password === result[0].password){
+                    user = result[0];
                     return res.redirect("/home");
                 }else{
                     return res.redirect("/");
