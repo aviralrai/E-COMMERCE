@@ -3,6 +3,8 @@
 <head>
   <title>E-commerce</title>
   <meta http-equiv="Content-Type" content="text/html">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="/styles/home.css">
 </head>
@@ -14,16 +16,19 @@
               <div class="thumbnail">
                 <div class="content-overlay"></div>
                   <img src='<%=data["link"]%>' class="image">
+                  <!-- <div class="content-overlay"></div> -->
                     <div class="content-details fadeIn-top">
-                      <h3>This is a title</h3>
-                      <p>This is a short description</p>
+                      <h3><%=data["itemname"]%></h3>
+                      <p><%=data["details"]%></p>
+                      <h2><span>Rs. </span><%=data["price"]%></h2>
                     </div>
                     <div class="caption">
                         <p class="title"><%=data["itemname"]%></p>
                     </div>
-                  <a href='/kamp/<%=data["itemId"]%>' class="btn btn-primary btn-block">ADD TO CART</a>
+                  <a href='/kamp/<%=data["itemId"]%>' class="btn btn-primary btn-block"><i class="fas fa-cart-arrow-down"></i> ADD TO CART</a>
               </div>
           </div>
+          
     <%})%>
   </div>
 </body>

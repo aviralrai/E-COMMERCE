@@ -16,14 +16,26 @@
 }*/
 
 body{
-    margin-top: 40px;
+    margin-top: 55px;
+    /*background-color: white;*/
+    /*background-image: url("http://www.allwhitebackground.com/images/2/2277.jpg");*/
 }
 
+.btn-outline-success{
+    color:white;
+    border-color: white;
+}
 .caption{
     text-align: center;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.9);
+}
+
 @import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
 
 *, *:before, *:after{
   margin: 0;
@@ -94,7 +106,15 @@ body{
 }
 
 .content:hover .content-overlay{
-  opacity: 1;
+  opacity: 0.8;
+}
+.btn-block:hover{
+     
+    color:white;
+    background-color:black;
+}
+.bg-dark {
+    background-color: royalblue!important;
 }
 
 /*.content-image{
@@ -128,13 +148,31 @@ body{
   color: #fff;
   font-weight: 500;
   letter-spacing: 0.15em;
-  margin-bottom: 0.5em;
+  /*margin-bottom: 0.5em;*/
+  margin-top: 20%;
+  text-transform: uppercase;
+}
+
+.content-details h2{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  /*margin-bottom: 0.5em;*/
+  /*margin-top: 20%;*/
   text-transform: uppercase;
 }
 
 .content-details p{
   color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 0.8em;
+}
+
+.caption p{
+  /*color: #fff;*/
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 900;
+  font-size: 1em;
 }
 
 .fadeIn-bottom{
@@ -142,7 +180,7 @@ body{
 }
 
 .fadeIn-top{
-  top: 20%;
+  top: 50%;
 }
 
 .fadeIn-left{
