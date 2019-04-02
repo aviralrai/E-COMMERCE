@@ -199,7 +199,8 @@ li {
   background: rgba(255,255,255,.2);
 }
 
-label {
+
+.style label {
   font-weight: 400;
   text-transform: uppercase;
   font-size: 13px;
@@ -207,6 +208,14 @@ label {
   padding-bottom: 10px;
   color: rgba(255,255,255,.7);
   display: block;
+}
+
+#radio-style label{
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding-left: 15px;
+  color: rgba(255,255,255,.7);
 }
 
 :focus {outline: none;

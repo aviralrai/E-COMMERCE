@@ -9,11 +9,11 @@
 
 .content{
     height: 400px;
-    margin-left: 10px;
+    margin-left: 0px;
 }
-.image:hover{
+/*.image:hover{
     transform: scale(1.05);
-}
+}*/
 
 body{
     margin-top: 40px;
