@@ -18,6 +18,8 @@ app.post("/signup",(req,res)=>{
                 db.query(query,(err,result)=>{
                     if(result[0]){
                         user = result[0];
+                    }else{
+                        console.log(err);
                     }
                 })
             }
@@ -37,6 +39,8 @@ app.post("/signin",(req,res)=>{
             if(result[0]){
                 if(password === result[0].password){
                     user = result[0];
+                }else{
+                    console.log("password is wrong");
                 }
             }
         }
