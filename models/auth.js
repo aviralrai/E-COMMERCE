@@ -10,6 +10,7 @@ app.post("/signup",(req,res)=>{
             return res.redirect("/");
         else{
             user = result[0];
+            console.log(user);
             return res.redirect("/home");
         }
     })
