@@ -15,7 +15,10 @@ const auth = require("./models/auth");
 app.use("/user",auth);
 
 app.get("/",(req,res)=>{
-    res.render("form.ejs")
+    if(Object.keys(user).length>0){
+        return res.redirect("/home");
+    }
+    return res.render("form.ejs")
 })
 
 
