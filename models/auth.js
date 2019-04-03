@@ -37,6 +37,7 @@ app.post("/signin",(req,res)=>{
 })
 
 app.get("/logout",(req,res)=>{
+    user={};
     res.redirect("/");
 })
 
