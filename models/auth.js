@@ -37,7 +37,6 @@ app.post("/signin",(req,res)=>{
             if(result[0]){
                 if(password === result[0].password){
                     user = result[0];
-                    return res.redirect("/home");
                 }
             }
         }
