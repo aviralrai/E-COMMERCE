@@ -20,6 +20,13 @@ app.get("/",(req,res)=>{
     return res.render("form.ejs")
 })
 
+app.get("/profile",(req,res)=>{
+	return res.render("profile.ejs")
+})
+
+app.get("/search",(req,res)=>{
+	return res.render("search.ejs")
+})
 
 app.get("/home",(req,res)=>{
     var query = 'select * from items';
