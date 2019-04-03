@@ -142,6 +142,7 @@ body{
   top: 20%;
   left: 50%;
   opacity: 1;
+ /* overflow: scroll;*/
 }
 
 .content-details h3{
