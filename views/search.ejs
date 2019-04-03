@@ -13,6 +13,9 @@
 <body>
   <%include navbar.ejs%>
   <div class="row">
+    <%if(error!==""){%>
+      <h1><%=error%></h1>
+    <%}%>
     <% data.forEach(function(data){%>
           <div class="col-xs-12 col-sm-6 col-md-3 content">
               <div class="thumbnail">

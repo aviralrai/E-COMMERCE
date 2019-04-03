@@ -19,6 +19,8 @@ app.get("/",(req,res)=>{
     }
     return res.render("form.ejs")
 })
+const search = require("./models/search");
+app.use("/search",search);
 
 app.get("/profile",(req,res)=>{
 	return res.render("profile.ejs")
