@@ -2,23 +2,22 @@ const express = require('express');
 const mysql = require("mysql");
 const db = require("../database");
 const app = express.Router();
-app.post("/signup",(req,res)=>{
+app.post("/signup",async function(req,res){
     let {email,password,fullname,usertype} = req.body;
     if(!usertype){
         usertype="costumer";
     }
     var query = mysql.format("insert into user(username,password,fullname,usertype) values(?,?,?,?)",[email,password,fullname,usertype]);
-    db.query(query,(err,result)=>{
+    await db.query(query,async function(err,result){
         if(err)
         {
             console.log("Error: "+err);
         }else{
             if(result){
                 var query = mysql.format("select * from user where userid=?",[result.insertId]);
-                db.query(query,(err,result)=>{
+                await db.query(query,(err,result)=>{
                     if(result[0]){
                         user = result[0];
-                        console.log(user);
                     }else{
                         console.log(err);
                     }
@@ -30,10 +29,10 @@ app.post("/signup",(req,res)=>{
 })
 
 
-app.post("/signin",(req,res)=>{
+app.post("/signin",async function(req,res){
     const {username,password} = req.body;
     var query = mysql.format("select * from user where username=?",[username]);
-    db.query(query,(err,result,fields)=>{
+    await db.query(query,(err,result)=>{
         if(err){
             console.log(err);
         }else{
