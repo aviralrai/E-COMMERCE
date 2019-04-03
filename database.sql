@@ -1,5 +1,5 @@
-#drop database ecommerce;
-#create database ecommerce;
+
+create database ecommerce;
 use ecommerce;
 /*line above will vary with user*/
 create table user (userid int not NULL auto_increment,fullname varchar(50),username varchar(30),usertype varchar(10),password varchar(40),primary key(userid),UNIQUE(username));
@@ -8,19 +8,6 @@ alter table user auto_increment=100;
 create table items (itemid int not NULL auto_increment,itemname varchar(100),seller varchar(30),price decimal(12,2),rating decimal(2,1),details varchar(1000),link varchar(1000),primary key(itemid));
 alter table items auto_increment=200;
 
-
-
-insert into user (fullname,username,usertype,password) values
-	("Aviral Rai","aviralrai","customer","aviral"),
-	("Bazif Rasool","darthvader","customer","bazif"),
-	("Krishna Kumar Sutar","jonsnow","customer","krishna"),
-	("Shiv Shankar","shivshankar","retailer","shiv"),
-	("Samarth Vats","awesamness","retailer","samarth"),
-	("Saumya Prakash","samvirus","retailer","saumya"),
-	("Firoz Mohammad","firozmd","customer","firoz"),
-	("Amar Kumar","amarkmr","customer","amar");
-
-select * from user;
 
 insert into items (itemname,seller,price,rating,details,link) values
 	("MI Note 5 Pro","Saumya Prakash",15000,4.6,"4 GB RAM | 64 GB ROM | 15.21 cm (5.99 inch) Full HD+ Display | 12MP + 5MP | 20MP Front Camera | 4100 mAh Battery | Qualcomm Snapdragon 636 Processor ","https://images-na.ssl-images-amazon.com/images/I/51N7nR%2BYarL._SX679_.jpg"),
