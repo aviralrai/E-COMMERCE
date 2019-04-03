@@ -26,7 +26,11 @@ app.get("/home",(req,res)=>{
     var query = 'select * from items';
     db.query(query,(error,result,fields)=>{
         if(error)
+        {
+            console.log("There is some error");
             throw error;
+        }
+        
         return res.render("home.ejs",{user: user,data:result});
     })
 })
