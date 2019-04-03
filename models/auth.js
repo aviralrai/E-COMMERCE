@@ -3,15 +3,18 @@ const mysql = require("mysql");
 const db = require("../database");
 const app = express.Router();
 app.post("/signup",(req,res)=>{
-    const {email,password,fullname} = req.body;
-    var query = mysql.format("insert into user(username,password,fullname) values(?,?,?)",[email,password,fullname]);
+    const {email,password,fullname,usertype} = req.body;
+    var query = mysql.format("insert into user(username,password,fullname,usertype) values(?,?,?,?)",[email,password,fullname,usertype]);
     db.query(query,(err,result)=>{
         if(err)
             return res.redirect("/");
         else{
-            user = result[0];
-            console.log(user);
-            return res.redirect("/home");
+            console.log(result);
+            if(result[0]){
+                user = result[0];
+                return res.redirect("/home");
+            }
+            return res.redirect("/");
         }
     })
 })
