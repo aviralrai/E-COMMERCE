@@ -1,7 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
-const mysql = require("mysql");
 const port = process.env.port||3000;
 const db = require("./database");
 app.use(express.static("staticFiles"));

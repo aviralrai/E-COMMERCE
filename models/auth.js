@@ -22,6 +22,8 @@ app.post("/signup",(req,res)=>{
                         console.log(err);
                     }
                 })
+            }else{
+                console.log("Result is not found");
             }
         }
     })
