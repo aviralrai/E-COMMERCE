@@ -8,10 +8,13 @@ app.post("/",async function(req,res){
     let query = mysql.format("select * from items where category=?",[searchItem]);
     await db.query(query,async function(err,result){
         if(result){
-            return res.render("search.ejs",{data: result});
+            let error = "";
+            if(result.length === 0){
+                error = "No Items Available";
+            }
+            res.render("search.ejs",{data: result,error: error});
         }else{
             console.log(err);
-            res.redirect("/home");
         } 
     })
 })
