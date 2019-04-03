@@ -18,12 +18,11 @@ app.post("/signup",(req,res)=>{
                 db.query(query,(err,result)=>{
                     if(result[0]){
                         user = result[0];
+                        console.log(user);
                     }else{
                         console.log(err);
                     }
                 })
-            }else{
-                console.log("Result is not found");
             }
         }
     })
