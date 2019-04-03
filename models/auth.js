@@ -9,7 +9,8 @@ app.post("/signup",(req,res)=>{
         if(err)
             return res.redirect("/");
         else{
-            return res.render("navbar.ejs",{user: req.body});
+            user = result[0];
+            return res.redirect("/home");
         }
     })
 })
