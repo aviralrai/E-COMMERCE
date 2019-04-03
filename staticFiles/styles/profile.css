@@ -3,6 +3,139 @@
 }*/
 
 #body{
-	background-color: black;
+	background-color: white;
+	/*background-color: rgba(100,100,100,0.7);*/
+}
 
+.container{
+	position: relative;
+	/*background-color: rgba(100,100,100,0.7);*/
+}
+
+#details{
+	position: relative;
+	margin-top: 100px;
+	width: 500px;
+	height: 500px;
+	/*border:2px solid blue;*/
+	left:50%;
+	margin-left: -250px;
+	background-color: rgba(240,240,240,0.7);
+}
+
+.form-styling {
+  width: 70%;
+  height: 35px;
+	/*padding-left: 15px;*/
+	border: none;
+	border-radius: 20px;
+ /* margin-bottom: 20px;*/
+  background: rgba(0,255,255,.2);
+}
+
+
+#details h3{
+	/* margin-right: auto;*/
+    left: 50%;
+    position: absolute;
+    width: 300px;
+    margin-left: -150px;
+}
+
+#details button{
+	left:80%;
+	position: absolute;
+}
+
+.box {
+  width: 20%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid blue;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: blue;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 80%;
+  height: 80%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 20px;
+  text-align: center;;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333!important;
+}
+.popup .close:hover {
+  color: orange!important;
+}
+.popup .content {
+  max-height: 80%;
+  overflow: auto;
+}
+
+.content button{
+	position: absolute;
+	bottom:5%;
+	margin-left: -35%;
+}
+
+.content input{
+	position: absolute;
+	top: 35%;
+	left:50%;
+	margin-left: -80px;
+}
+
+a{
+	color: white!important;
 }
