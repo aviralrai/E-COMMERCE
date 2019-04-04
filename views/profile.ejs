@@ -3,6 +3,8 @@
 <head>
 	<title>SHoRT-CART</title>
 	<link rel="shortcut icon" href="/img/kisspng-tote-bag-shopping-bag-gift-gift-bag-5aa415fbb24921.1517083015207029717303.png"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="/styles/profile.css">
 </head>
@@ -11,12 +13,12 @@
 	<div class="container">
 		<div id="details">
 			<h3 style="margin-top: 100px;">
-				<%=user.fullname%>
+				Name: <span style="color:red;"><%=user.fullname%></span>
 			</h3>
 			<button class="btn btn-danger" style="margin-top: 100px"><a href="#popup1">Edit</a></button>
-			<h3 style="margin-top: 200px;">Email: <%=user.username%></h3>
+			<h3 style="margin-top: 200px;">Email: <span style="color:red;"><%=user.username%></span></h3>
 			<button class="btn btn-danger" style="margin-top: 200px"><a href="#popup2">Edit</a></button>
-			<h3 style="margin-top: 300px;">Address: <%=user.address%></h3>
+			<h3 style="margin-top: 300px;">Address: <span style="color:orange;"><%=user.address%></span></h3>
 			<button class="btn btn-danger" style="margin-top: 300px"><a href="#popup3">Edit</a></button>
 			<button class="btn btn-danger" style="margin-top: 450px;margin-left: -240px;"><a href="#popup4">CHANGE PASSWORD</a></button>
 

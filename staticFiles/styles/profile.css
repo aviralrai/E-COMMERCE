@@ -20,7 +20,10 @@
 	/*border:2px solid blue;*/
 	left:50%;
 	margin-left: -250px;
-	background-color: rgba(240,240,240,0.7);
+	background: linear-gradient(
+    rgba(246,247,249,0.1),
+    rgba(0,0,249,0.8));
+	border-radius: 20px;
 }
 
 .form-styling {
@@ -30,7 +33,7 @@
 	border: none;
 	border-radius: 20px;
  /* margin-bottom: 20px;*/
-  background: rgba(0,255,255,.2);
+  background: rgba(0,255,255,0.2);
 }
 
 
@@ -50,7 +53,7 @@
 .box {
   width: 20%;
   margin: 0 auto;
-  background: rgba(255,255,255,0.2);
+  background: rgba(0,0,255,0.8);
   padding: 35px;
   border: 2px solid #fff;
   border-radius: 20px/50px;
@@ -101,10 +104,15 @@
 
 .popup h2 {
   margin-top: 20px;
-  text-align: center;;
+  text-align: center;
   color: #333;
-  font-family: Tahoma, Arial, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
+
+#details h3{
+	font-family: 'Josefin Sans', sans-serif;
+}
+
 .popup .close {
   position: absolute;
   top: 20px;
@@ -136,6 +144,6 @@
 	margin-left: -80px;
 }
 
-a{
+.btn-danger a{
 	color: white!important;
 }

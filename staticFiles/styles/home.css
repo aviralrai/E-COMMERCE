@@ -114,7 +114,12 @@ body{
     background-color:black;
 }
 .bg-dark {
-    background-color: royalblue!important;
+    background:linear-gradient(rgba(65,105,249,0.9),rgba(0,0,249,0.8));
+}
+
+.dropdown-item:hover{
+    background:rgba(246,247,249,0.1),
+    rgba(0,0,249,0.8));
 }
 
 /*.content-image{
