@@ -11,12 +11,12 @@
 	<div class="container">
 		<div id="details">
 			<h3 style="margin-top: 100px;">
-				Name: Aviral Rai
+				<%=user.fullname%>
 			</h3>
 			<button class="btn btn-danger" style="margin-top: 100px"><a href="#popup1">Edit</a></button>
-			<h3 style="margin-top: 200px;">Email: a@g.com</h3>
+			<h3 style="margin-top: 200px;">Email: <%=user.username%></h3>
 			<button class="btn btn-danger" style="margin-top: 200px"><a href="#popup2">Edit</a></button>
-			<h3 style="margin-top: 300px;">Address: </h3>
+			<h3 style="margin-top: 300px;">Address: <%=user.address%></h3>
 			<button class="btn btn-danger" style="margin-top: 300px"><a href="#popup3">Edit</a></button>
 			<button class="btn btn-danger" style="margin-top: 450px;margin-left: -240px;"><a href="#popup4">CHANGE PASSWORD</a></button>
 
@@ -32,8 +32,10 @@
 					<h2>Update Name</h2>
 					<a class="close" href="#">×</a>
 					<div class="content">
-						<input type="text" name="fullname" placeholder="          ENTER NEW NAME" class="form-styling">
-						<button class="btn btn-danger">SAVE</button>
+						<form method="post" action="/profile/update">
+							<input type="text" name="fullname" placeholder="          ENTER NEW NAME" class="form-styling">
+							<button class="btn btn-danger">SAVE</button>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -42,8 +44,10 @@
 					<h2>Update Email</h2>
 					<a class="close" href="#">×</a>
 					<div class="content">
-						<input type="email" name="email" placeholder="       ENTER NEW EMAIL" class="form-styling">
-						<button class="btn btn-danger">SAVE</button>
+						<form method="post" action="/profile/update">
+							<input type="email" name="email" placeholder="       ENTER NEW EMAIL" class="form-styling">
+							<button class="btn btn-danger">SAVE</button>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -52,8 +56,10 @@
 					<h2>Update Address</h2>
 					<a class="close" href="#">×</a>
 					<div class="content">
-						<input type="email" name="address" placeholder="     ENTER NEW ADDRESS" class="form-styling">
-						<button class="btn btn-danger">SAVE</button>
+						<form method="post" action="/profile/update">
+							<input type="text" name="address" placeholder="     ENTER NEW ADDRESS" class="form-styling">
+							<button class="btn btn-danger">SAVE</button>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -62,9 +68,11 @@
 					<h2>Update Password</h2>
 					<a class="close" href="#">×</a>
 					<div class="content">
-						<input type="Password" name="password" placeholder="    ENTER OLD PASSWORD" class="form-styling">
-						<input type="Password" name="password" placeholder="    ENTER NEW PASSWORD" class="form-styling" style="top: 50%;">
-						<button class="btn btn-danger">SAVE</button>
+						<form method="post" action="/profile/update">
+							<input type="Password" name="password1" placeholder="    ENTER OLD PASSWORD" class="form-styling">
+							<input type="Password" name="password2" placeholder="    ENTER NEW PASSWORD" class="form-styling" style="top: 50%;">
+							<button class="btn btn-danger">SAVE</button>
+						</form>
 					</div>
 				</div>
 			</div>

@@ -22,9 +22,8 @@ app.get("/",(req,res)=>{
 const search = require("./models/search");
 app.use("/search",search);
 
-app.get("/profile",(req,res)=>{
-	return res.render("profile.ejs")
-})
+const profile = require("./models/profile");
+app.use("/profile",profile);
 
 app.get("/search",(req,res)=>{
 	return res.render("search.ejs")
