@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#body{
+	margin-top: 100px;
+}
+
+.form-container {
+    margin: 20px auto;
+    border-radius: 5px;
+    width: 80%;
+    background: linear-gradient(
+    rgba(246,247,249,0.1),
+    rgba(0,0,249,0.8));
+    padding: 40px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h1 {
+    margin-bottom: 35px!important;
+    text-align: center;
+}
+
+input[type=password], input[type=text], input[type=email], input[type=number], select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-size: 20px;
+}
+
+input[type=submit] {
+    /*float: right;*/
+    color: #f2f2f2;
+    cursor: pointer;
+    margin: 20px 25px 0 auto;
+    padding: 15px 40px;
+    font-size: 16px;
+    background-color: #747474;
+    border-radius: 50px;
+    border: 1px solid #747474;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+}
+
+input[type=submit]:hover {
+    background: #151719;
+    /*background-color: red;*/
+    box-shadow: none;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75 {
+        width: 100%;
+        margin-top: 0;
+    }
+    input[type=submit] {
+        width: 100%;
+        margin: 30px auto;
+    }
+}

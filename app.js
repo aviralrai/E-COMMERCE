@@ -29,6 +29,10 @@ app.get("/search",(req,res)=>{
 	return res.render("search.ejs")
 })
 
+app.get("/retailer",(req,res)=>{
+	return res.render("retailer.ejs")
+})
+
 app.get("/home",(req,res)=>{
     var query = 'select * from items';
     db.query(query,(error,result,fields)=>{
