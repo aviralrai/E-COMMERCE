@@ -67,7 +67,7 @@ app.post("/update",async function(req,res){
             }
         })
     }
-    return res.redirect("/profile",{error: body0.error});
+    return res.redirect("/profile");
 })
 
 module.exports = app;
