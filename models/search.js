@@ -5,7 +5,7 @@ const app = express.Router();
 
 app.post("/",async function(req,res){
     const {searchItem} = req.body;
-    let query = mysql.format("select * from items where category=?",[searchItem]);
+    let query = "select * from items where category like '%"+searchItem+"%'";
     await db.query(query,async function(err,result){
         if(result){
             let error = "";
