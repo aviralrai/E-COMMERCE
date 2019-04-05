@@ -8,7 +8,7 @@ app.get("/",(req,res)=>{
 })
 
 app.post("/update",async function(req,res){
-    let name = req.body.fullname||req.body.password||req.body.username||req.body.address;
+    let name = req.body.fullname||req.body.password1||req.body.username||req.body.address;
     var body0 = {
         name : Object.keys(req.body)[0],
         value: name,
@@ -16,7 +16,7 @@ app.post("/update",async function(req,res){
         flag: 0,
     }
     if(Object.keys(req.body).length > 1){
-        if(req.body.password !== req.body.password1){
+        if(req.body.password !== user.password){
             body0.error = "Make sure both the password are same";
             body0.flag = 1;
         }
