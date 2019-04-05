@@ -25,13 +25,8 @@ app.use("/search",search);
 const profile = require("./models/profile");
 app.use("/profile",profile);
 
-app.get("/search",(req,res)=>{
-	return res.render("search.ejs")
-})
-
-app.get("/retailer",(req,res)=>{
-	return res.render("retailer.ejs")
-})
+const retailer = require("./models/reatailer");
+app.use("/retailer",retailer);
 
 app.get("/home",(req,res)=>{
     var query = 'select * from items';
