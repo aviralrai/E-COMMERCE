@@ -1,12 +1,11 @@
 const express = require("express");
 const db = require("../database");
-const mysql = require("mysql");
 const app = express.Router();
 
-app.post("/",async function(req,res){
+app.post("/",(req,res)=>{
     const {searchItem} = req.body;
     let query = "select * from items where category like '%"+searchItem+"%'";
-    await db.query(query,async function(err,result){
+    db.query(query,async function(err,result){
         if(result){
             let error = "";
             if(result.length === 0){

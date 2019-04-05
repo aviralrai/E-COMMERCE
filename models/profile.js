@@ -7,7 +7,7 @@ app.get("/",(req,res)=>{
     return res.render("profile.ejs",{user:user});
 })
 
-app.post("/update",async function(req,res){
+app.post("/update",(req,res)=>{
     let name = req.body.fullname||req.body.password1||req.body.username||req.body.address;
     var body0 = {
         name : Object.keys(req.body)[0],
@@ -26,7 +26,7 @@ app.post("/update",async function(req,res){
         switch(body0.name){
             case 'username':
                 var query = mysql.format("update user set username=? where username=?",[body0.value,user.username]);
-                await db.query(query,async function(err,result){
+                db.query(query,async function(err,result){
                     if(!result){
                         console.log(err);
                     }
@@ -34,7 +34,7 @@ app.post("/update",async function(req,res){
                 break;
             case 'password':
                 var query = mysql.format("update user set password=? where username=?",[body0.value,user.username]);
-                await db.query(query,async function(err,result){
+                db.query(query,async function(err,result){
                     if(!result){
                         console.log(err);
                     }
@@ -42,7 +42,7 @@ app.post("/update",async function(req,res){
                 break;
             case 'fullname':
                 var query = mysql.format("update user set fullname=? where username=?",[body0.value,user.username]);
-                await db.query(query,async function(err,result){
+                db.query(query,async function(err,result){
                     if(!result){
                         console.log(err);
                     }
@@ -50,7 +50,7 @@ app.post("/update",async function(req,res){
                 break;
             case 'addresss':
                 var query = mysql.format("update user set address=? where username=?",[body0.value,user.username]);
-                await db.query(query,async function(err,result){
+                db.query(query,async function(err,result){
                     if(!result){
                         console.log(err);
                     }
@@ -58,7 +58,7 @@ app.post("/update",async function(req,res){
         }
 
         var query = mysql.format("select * from user where userid=?",[user.userid]);
-        await db.query(query,(err,result)=>{
+        db.query(query,(err,result)=>{
             if(!err){
                 user = result[0];
             }else{
