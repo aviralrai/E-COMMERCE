@@ -7,4 +7,17 @@ app.get("/",(req,res)=>{
     res.render("retailer.ejs");
 })
 
+app.post("/",(req,res)=>{
+    let {itemname,details,link,price,category} = req.body;
+    price = Number(price);
+    const query = mysql.format("insert into items(itemname,seller,details,link,price,category) values (?,?,?,?,?,?)",[itemname,user.username,details,link,price,category]);
+    db.query(query,(err,result)=>{
+        if(err)
+            console.log(err);
+        else 
+            console.log(result);
+    })
+    res.redirect("/home");
+})
+
 module.exports = app;
