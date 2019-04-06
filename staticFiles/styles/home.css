@@ -15,7 +15,7 @@
     transform: scale(1.05);
 }*/
 
-body{
+#body{
     margin-top: 55px;
     /*background-color: white;*/
     /*background-image: url("http://www.allwhitebackground.com/images/2/2277.jpg");*/
@@ -29,10 +29,10 @@ body{
     text-align: center;
 }
 
-.navbar-dark .navbar-nav .nav-link {
+/*.navbar-dark .navbar-nav .nav-link {
     color: rgba(255,255,255,.9);
 }
-
+*/
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
@@ -108,18 +108,17 @@ body{
 .content:hover .content-overlay{
   opacity: 0.8;
 }
-.btn-block:hover{
+#temp:hover{
      
     color:white;
     background-color:black;
 }
-.bg-dark {
+/*.bg-dark {
     background:linear-gradient(rgba(65,105,249,0.9),rgba(0,0,249,0.8));
 }
-
+*/
 .dropdown-item:hover{
-    background:rgba(246,247,249,0.1),
-    rgba(0,0,249,0.8));
+    background-color: black;
 }
 
 /*.content-image{
@@ -147,7 +146,7 @@ body{
   top: 20%;
   left: 50%;
   opacity: 1;
- /* overflow: scroll;*/
+  /*overflow: scroll;*/
 }
 
 .content-details h3{

@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="/styles/home.css">
 </head>
-<body>
+<body id="body">
   <%include navbar.ejs%>
   <div class="row">
     <% data.forEach(function(data){%>
@@ -27,7 +27,7 @@
                     <div class="caption">
                         <p class="title"><%=data["itemname"]%></p>
                     </div>
-                  <a href='/kamp/<%=data["itemId"]%>' class="btn btn-primary btn-block"><i class="fas fa-cart-arrow-down"></i> ADD TO CART</a>
+                  <a href='/kamp/<%=data["itemId"]%>' class="btn btn-primary btn-block" id="temp"><i class="fas fa-cart-arrow-down"></i> ADD TO CART</a>
               </div>
           </div>
           
