@@ -8,6 +8,7 @@ alter table user auto_increment=100;
 create table items (itemid int not NULL auto_increment,itemname varchar(100),seller varchar(30),category varchar(30),price decimal(12,2),rating decimal(2,1),details varchar(1000),link varchar(1000),primary key(itemid));
 alter table items auto_increment=200;
 
+create table cart (userid int,itemid int);
 
 insert into items (itemname,seller,category,price,rating,details,link) values
 	("MI Note 5 Pro","Saumya Prakash","Phone",15000,4.6,"4 GB RAM | 64 GB ROM | 15.21 cm (5.99 inch) Full HD+ Display | 12MP + 5MP | 20MP Front Camera | 4100 mAh Battery | Qualcomm Snapdragon 636 Processor ","https://images-na.ssl-images-amazon.com/images/I/51N7nR%2BYarL._SX679_.jpg"),

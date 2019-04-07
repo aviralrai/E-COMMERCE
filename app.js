@@ -33,6 +33,9 @@ app.use("/profile",profile);
 const retailer = require("./models/reatailer");
 app.use("/retailer",retailer);
 
+const cart = require("./models/cart");
+app.use("/cart",cart);
+
 app.get("/home",(req,res)=>{
     var query = 'select * from items';
     db.query(query,(error,result,fields)=>{
@@ -43,19 +46,6 @@ app.get("/home",(req,res)=>{
         }
         
         return res.render("home.ejs",{user: user,data:result});
-    })
-})
-
-app.get("/cart",(req,res)=>{
-    var query = 'select * from items';
-    db.query(query,(error,result,fields)=>{
-        if(error)
-        {
-            console.log("There is some error");
-            throw error;
-        }
-        
-        return res.render("cart.ejs",{user: user,data:result});
     })
 })
 

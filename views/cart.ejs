@@ -11,8 +11,8 @@
 <body id="body">
 	<%include navbar.ejs%>
 	<div class="container">
-		<h2>WELCOME AVIRAL RAI</h2>
-		<h2>TOTAL NUMBER OF ITEMS IN YOUR CART: 3</h2>
+		<h2>WELCOME <%=user.fullname%></h2>
+		<h2>TOTAL NUMBER OF ITEMS IN YOUR CART: <%=data.length%></h2>
 		<div class="row">
    		 <% data.forEach(function(data){%>
           <div class="col-xs-12 col-lg-12 content">
@@ -28,16 +28,13 @@
                     <div class="caption">
                         <p class="title"><%=data["itemname"]%></p>
                     </div>
-                    <div class="caption">
-                        <p class="title">PRICE : RS. 20000</p>
-                    </div>
-                  <a href='/kamp/<%=data["itemId"]%>' class="btn btn-primary btn-block" id="temp">REMOVE FROM CART</a>
+                  <a href='/cart/remove/<%=data["itemId"]%>' class="btn btn-primary btn-block" id="temp">REMOVE FROM CART</a>
               </div>
           </div>
           
    		 <%})%>
   		</div>
-  		<h2>TOTAL AMOUNT: RS. 90,000</h2>
+  		<h2>TOTAL AMOUNT: RS. <%=sum%></h2>
   		<a href='/kamp/<%=data["itemId"]%>' class="btn btn-primary btn-block" id="temp">BUY NOW!!</a>
 	</div>
 

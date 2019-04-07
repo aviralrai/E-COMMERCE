@@ -8,7 +8,7 @@ h2{
 }
 
 .image{
-    width: 100%;
+    width: 300px;
     height: 270px;
     margin-top: 20px;
     margin-right: auto;
@@ -22,10 +22,10 @@ h2{
 }*/
 
 .content{
-	border:2px solid blue;
+  border:2px solid blue;
 	width:500px;
-    height: 425px;
-    margin-left: 0px;
+  height: 425px;
+  margin-left: 0px;
 }
 
 /*.image:hover{
