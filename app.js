@@ -19,6 +19,11 @@ app.get("/",(req,res)=>{
     }
     return res.render("form.ejs")
 })
+
+// app.get("/cart",(req,res)=>{
+// 	return res.render("cart.ejs")
+// })
+
 const search = require("./models/search");
 app.use("/search",search);
 
@@ -38,6 +43,19 @@ app.get("/home",(req,res)=>{
         }
         
         return res.render("home.ejs",{user: user,data:result});
+    })
+})
+
+app.get("/cart",(req,res)=>{
+    var query = 'select * from items';
+    db.query(query,(error,result,fields)=>{
+        if(error)
+        {
+            console.log("There is some error");
+            throw error;
+        }
+        
+        return res.render("cart.ejs",{user: user,data:result});
     })
 })
 
