@@ -20,7 +20,6 @@ app.get("/",(req,res)=>{
 
 app.get("/add/:id",(req,res)=>{
     var query = "insert into cart(userid,itemid) values ("+user.userid+","+req.params.id+")";
-    console.log(query);
     db.query(query,(err,result)=>{
         console.log(result);
     })
@@ -28,10 +27,8 @@ app.get("/add/:id",(req,res)=>{
 })
 
 app.get("/remove/:id",(req,res)=>{
-    var query = "insert into cart(userid,itemid) values ("+user.userid+","+req.params.id+")";
-    console.log(query);
+    var query = "delete from  cart where itemid = "+req.params.id;
     db.query(query,(err,result)=>{
-        console.log(result);
     })
     res.redirect('back');
 })
