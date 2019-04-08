@@ -8,7 +8,7 @@ app.get('/',(req,res)=>{
         if(err){
             console.log(err);
         }else{
-            res.render("orders.ejs",{data: result});
+            res.render("myorders.ejs",{data: result});
         }
     })
 })
