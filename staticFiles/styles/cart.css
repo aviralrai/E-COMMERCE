@@ -5,6 +5,7 @@
 
 h2{
 	text-align: center;
+	margin-top: 30px;
 }
 
 .image{
@@ -198,6 +199,10 @@ p{
   text-align:center;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1em;
+}
+
+.thumbnail{
+	margin-bottom:20px;
 }
 
 .caption p{
