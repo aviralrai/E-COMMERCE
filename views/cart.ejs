@@ -17,15 +17,27 @@
 		<div class="row">
    		 <% data.forEach(function(data){%>
           <div class="col-xs-12 col-lg-12 content">
-              <div class="thumbnail" style="border:2px solid red;">
-                <div class="content-overlay"></div>
-                  <img src='<%=data["link"]%>' class="image">
-                  <!-- <div class="content-overlay"></div> -->
-                    <div class="content-details fadeIn-top">
+              <div class="thumbnail" style="border:2px solid green;height:500px">
+                <!-- <div class="content-overlay"></div> -->
+                <div class="row">
+                <div class="col-lg-6" style="border:2px solid yellow;">
+                
+                    <img src='<%=data["link"]%>' class="image">
+                  </div>
+                  
+                  <div class="col-lg-6" style="border:2px solid pink">
+                    <h3><%=data["itemname"]%></h3>
+                    <p><%=data["details"]%></p>
+                    <h2 id="price"><span>Rs. </span><%=data["price"]%></h2>
+                  </div>
+                </div>
+                
+                  
+                    <!-- <div class="content-details fadeIn-top">
                       <h3><%=data["itemname"]%></h3>
                       <p><%=data["details"]%></p>
                       <h2><span>Rs. </span><%=data["price"]%></h2>
-                    </div>
+                    </div> -->
                     <div class="caption">
                         <p class="title"><%=data["itemname"]%></p>
                     </div>
