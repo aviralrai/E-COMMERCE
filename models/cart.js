@@ -21,7 +21,6 @@ app.get("/",(req,res)=>{
 app.get("/add/:id",(req,res)=>{
     var query = "insert into cart(userid,itemid) values ("+user.userid+","+req.params.id+")";
     db.query(query,(err,result)=>{
-        console.log(result);
     })
     res.redirect('back');
 })

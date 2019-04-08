@@ -13,7 +13,6 @@
 	<div class="container">
 		<h2>WELCOME <%=user.fullname%></h2>
     <h2>TOTAL NUMBER OF ITEMS IN YOUR CART: <%=data.length%></h2>
-    <%if(data.length > 0){%>
 		<div class="row">
    		 <% data.forEach(function(data){%>
           <div class="col-xs-12 col-lg-12 content">
@@ -46,7 +45,8 @@
           </div>
           
    		 <%})%>
-  		</div>
+      </div>
+      <%if(data.length > 0){%>
   		<h2>TOTAL AMOUNT: RS. <%=sum%></h2>
       <a href='/kamp/<%=data["itemId"]%>' class="btn btn-primary btn-block" id="temp">BUY NOW!!</a>
       <%}%>
