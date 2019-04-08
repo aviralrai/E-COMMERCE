@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SHoRT-CART</title>
+	<link rel="shortcut icon" href="/img/kisspng-tote-bag-shopping-bag-gift-gift-bag-5aa415fbb24921.1517083015207029717303.png"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/styles/myorders.css">
+</head>
+<body id="body">
+	<%include navbar.ejs%>
+	<div class="container">
+		<h2 style="padding-top: 20px;">WELCOME <span style="color:red;"><%=user.fullname%></span></h2>
+    <h2 style="border-bottom: 1px solid red;padding-bottom: 50px;">TOTAL NUMBER OF ITEMS IN YOUR CART: <span style="color: red;"><%=data.length%></span></h2>
+		<div class="row">
+   		 <% data.forEach(function(data){%>
+          <div class="col-xs-12 col-lg-12 content" style="border-bottom: 1px solid grey">
+              <div class="thumbnail">
+                <!-- <div class="content-overlay"></div> -->
+                <div class="row">
+                  <div class="col-lg-6">
+                    <img src='<%=data["link"]%>' class="image">
+                  </div>
+                  
+                  <div class="col-lg-6">
+                    <h3><%=data["itemname"]%></h3>
+                    <p><%=data["details"]%></p>
+                    <h2 id="price"><span>Rs. </span><%=data["price"]%></h2>
+                    <a href='/cart/remove/<%=data["itemid"]%>' class="btn btn-danger btn-block" id="temp" style="letter-spacing: 0.7em">REMOVE FROM CART</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+   		 <%})%>
+      </div>
+      <div style="margin-top: 100px;z-index:-1">
+      <%if(data.length > 0){%>
+  		<h2>TOTAL AMOUNT: Rs. <%=sum%></h2>
+      <a href='/cart/<%=data["itemid"]%>' class="btn btn-success" style="margin-left: 37%;text-decoration: none;width: 300px!important;letter-spacing: 0.8em;margin-top: 20px;" id="temp">BUY NOW!!</a>
+      <%}%>
+    </div>
+	</div>
+
+</body>
+</html>
