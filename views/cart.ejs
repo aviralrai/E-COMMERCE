@@ -15,41 +15,29 @@
     <h2>TOTAL NUMBER OF ITEMS IN YOUR CART: <%=data.length%></h2>
 		<div class="row">
    		 <% data.forEach(function(data){%>
-          <div class="col-xs-12 col-lg-12 content">
-              <div class="thumbnail" style="border:2px solid green;height:500px">
+          <div class="col-xs-12 col-lg-12 content" style="border-bottom: 2px solid grey">
+              <div class="thumbnail">
                 <!-- <div class="content-overlay"></div> -->
                 <div class="row">
-                <div class="col-lg-6" style="border:2px solid yellow;">
-                
+                  <div class="col-lg-6">
                     <img src='<%=data["link"]%>' class="image">
                   </div>
                   
-                  <div class="col-lg-6" style="border:2px solid pink">
+                  <div class="col-lg-6">
                     <h3><%=data["itemname"]%></h3>
                     <p><%=data["details"]%></p>
                     <h2 id="price"><span>Rs. </span><%=data["price"]%></h2>
+                    <a href='/cart/remove/<%=data["itemid"]%>' class="btn btn-danger btn-block" id="temp">REMOVE FROM CART</a>
                   </div>
                 </div>
-                
-                  
-                    <!-- <div class="content-details fadeIn-top">
-                      <h3><%=data["itemname"]%></h3>
-                      <p><%=data["details"]%></p>
-                      <h2><span>Rs. </span><%=data["price"]%></h2>
-                    </div> -->
-                    <div class="caption">
-                        <p class="title"><%=data["itemname"]%></p>
-                    </div>
-                  <a href='/cart/remove/<%=data["itemid"]%>' class="btn btn-primary btn-block" id="temp">REMOVE FROM CART</a>
               </div>
           </div>
-          
    		 <%})%>
       </div>
       <div style="margin-top: 100px;z-index:-1">
       <%if(data.length > 0){%>
   		<h2>TOTAL AMOUNT: RS. <%=sum%></h2>
-      <a href='/kamp/<%=data["itemId"]%>' class="btn btn-primary btn-block" id="temp">BUY NOW!!</a>
+      <a href='/kamp/<%=data["itemId"]%>' class="btn-lg btn-success" style="margin-left: 44%;text-decoration: none" id="temp">BUY NOW!!</a>
       <%}%>
     </div>
 	</div>
