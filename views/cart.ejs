@@ -11,11 +11,11 @@
 <body id="body">
 	<%include navbar.ejs%>
 	<div class="container">
-		<h2>WELCOME <%=user.fullname%></h2>
-    <h2>TOTAL NUMBER OF ITEMS IN YOUR CART: <%=data.length%></h2>
+		<h2 style="padding-top: 20px;">WELCOME <span style="color:red;"><%=user.fullname%></span></h2>
+    <h2 style="border-bottom: 1px solid red;padding-bottom: 50px;">TOTAL NUMBER OF ITEMS IN YOUR CART: <span style="color: red;"><%=data.length%></span></h2>
 		<div class="row">
    		 <% data.forEach(function(data){%>
-          <div class="col-xs-12 col-lg-12 content" style="border-bottom: 2px solid grey">
+          <div class="col-xs-12 col-lg-12 content" style="border-bottom: 1px solid grey">
               <div class="thumbnail">
                 <!-- <div class="content-overlay"></div> -->
                 <div class="row">
@@ -27,7 +27,7 @@
                     <h3><%=data["itemname"]%></h3>
                     <p><%=data["details"]%></p>
                     <h2 id="price"><span>Rs. </span><%=data["price"]%></h2>
-                    <a href='/cart/remove/<%=data["itemid"]%>' class="btn btn-danger btn-block" id="temp">REMOVE FROM CART</a>
+                    <a href='/cart/remove/<%=data["itemid"]%>' class="btn btn-danger btn-block" id="temp" style="letter-spacing: 0.7em">REMOVE FROM CART</a>
                   </div>
                 </div>
               </div>
@@ -36,8 +36,8 @@
       </div>
       <div style="margin-top: 100px;z-index:-1">
       <%if(data.length > 0){%>
-  		<h2>TOTAL AMOUNT: RS. <%=sum%></h2>
-      <a href='/kamp/<%=data["itemId"]%>' class="btn-lg btn-success" style="margin-left: 44%;text-decoration: none" id="temp">BUY NOW!!</a>
+  		<h2>TOTAL AMOUNT: Rs. <%=sum%></h2>
+      <a href='/cart/<%=data["itemid"]%>' class="btn btn-success" style="margin-left: 37%;text-decoration: none;width: 300px!important;letter-spacing: 0.8em;margin-top: 20px;" id="temp">BUY NOW!!</a>
       <%}%>
     </div>
 	</div>

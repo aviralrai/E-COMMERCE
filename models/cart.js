@@ -14,7 +14,6 @@ app.get("/",(req,res)=>{
         result.forEach(element => {
             sum+=element.price;
         });
-        console.log(result);
         return res.render("cart.ejs",{user: user,data:result,sum});
     })
 })
@@ -23,7 +22,7 @@ app.get("/add/:id",(req,res)=>{
     var query = "insert into cart(userid,itemid) values ("+user.userid+","+req.params.id+")";
     db.query(query,(err,result)=>{
     })
-    res.redirect('back');
+    res.redirect('/');
 })
 
 app.get("/remove/:id",(req,res)=>{
