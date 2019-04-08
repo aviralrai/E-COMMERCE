@@ -1,6 +1,4 @@
 
-create database ecommerce;
-use ecommerce;
 /*line above will vary with user*/
 create table user (userid int not NULL auto_increment,fullname varchar(50),username varchar(30),usertype varchar(10),password varchar(40),primary key(userid),UNIQUE(username));
 alter table user auto_increment=100;
@@ -9,6 +7,8 @@ create table items (itemid int not NULL auto_increment,itemname varchar(100),sel
 alter table items auto_increment=200;
 
 create table cart (userid int,itemid int);
+
+create table orders(orderid int auto_increment, userid int, itemid int, status char(20),primary key(orderid));
 
 insert into items (itemname,seller,category,price,rating,details,link) values
 	("MI Note 5 Pro","Saumya Prakash","Phone",15000,4.6,"4 GB RAM | 64 GB ROM | 15.21 cm (5.99 inch) Full HD+ Display | 12MP + 5MP | 20MP Front Camera | 4100 mAh Battery | Qualcomm Snapdragon 636 Processor ","https://images-na.ssl-images-amazon.com/images/I/51N7nR%2BYarL._SX679_.jpg"),
