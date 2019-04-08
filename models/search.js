@@ -2,6 +2,9 @@ const express = require("express");
 const db = require("../database");
 const app = express.Router();
 
+app.get("/",(req,res)=>{
+    
+})
 app.post("/",(req,res)=>{
     const {searchItem} = req.body;
     let query = "select * from items where category like '%"+searchItem+"%'";

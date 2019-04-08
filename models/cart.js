@@ -14,6 +14,7 @@ app.get("/",(req,res)=>{
         result.forEach(element => {
             sum+=element.price;
         });
+        console.log(result);
         return res.render("cart.ejs",{user: user,data:result,sum});
     })
 })
