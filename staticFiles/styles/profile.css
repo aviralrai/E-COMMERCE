@@ -27,12 +27,13 @@
 }
 
 .form-styling {
-  width: 70%;
+  width: 80%;
+  position:absolute;
   height: 35px;
-	/*padding-left: 15px;*/
+	padding-left: 15px;
 	border: none;
 	border-radius: 20px;
- /* margin-bottom: 20px;*/
+  margin-bottom: 20px;
   background: rgba(0,255,255,0.2);
 }
 
@@ -141,7 +142,7 @@
 	position: absolute;
 	top: 35%;
 	left:50%;
-	margin-left: -80px;
+	margin-left: -155px;
 }
 
 .btn-danger a{

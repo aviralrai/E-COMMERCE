@@ -42,16 +42,16 @@
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fas fa-male"></i> <%=user.fullname%>
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="/profile"><i class="fas fa-user-circle"></i> MY PROFILE</a>
-        <a class="dropdown-item" href="/cart"><i class="fas fa-shopping-cart"></i> CART</a>
-        <a class="dropdown-item" href="/order"><i class="fas fa-shopping-cart"></i> MY ORDERS</a>
+        <a class="dropdown-item" href="/profile"><span style="color: blue;"><i class="fas fa-user-circle"></i></span> MY PROFILE</a>
+        <a class="dropdown-item" href="/cart"><span style="color: blue;"><i class="fas fa-shopping-cart"></i></span> CART</a>
+        <a class="dropdown-item" href="/order"><span style="color: blue;"><i class="fas fa-gift"></i></span> MY ORDERS</a>
         <%if(user.usertype === "retailer"){%>
-          <a class="dropdown-item" href="/retailer"><i class="fas fa-plus-circle"></i> ADD ITEM</a>
+          <a class="dropdown-item" href="/retailer"><span style="color: blue;"><i class="fas fa-plus-circle"></i></span> ADD ITEM</a>
         <%}%>
         <%if(user.usertype === "retailer"){%>
-          <a class="dropdown-item" href="/neworder"><i class="fas fa-haykal"></i> NEW ORDERS</a>
+          <a class="dropdown-item" href="/neworder"><span style="color: blue;"><i class="fas fa-haykal"></i></span> NEW ORDERS</a>
         <%}%>
-        <a class="dropdown-item" href="/user/logout"><i class="fas fa-sign-out-alt"></i> LOGOUT</a>
+        <a class="dropdown-item" href="/user/logout"><span style="color: blue;"><i class="fas fa-sign-out-alt"></i></span> LOGOUT</a>
       </div>
     </li>
   	</ul>

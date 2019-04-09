@@ -12,9 +12,7 @@
 	<%include navbar.ejs%>
 	<div class="container" style="padding-top: 10px;">
     <div class="position">
-		<h2 style="padding-top: 30px;padding-bottom: 20px;color: white;letter-spacing:0.3em ;font-family: 'Josefin Sans', sans-serif;background: linear-gradient(
-    rgba(246,247,249,0.1),
-    rgba(0,0,0,0.8));border-radius: 0px">YOUR ORDERS </h2>
+		<h2 style="padding-top: 30px;padding-bottom: 20px;color: white;letter-spacing:0.3em ;font-family: 'Josefin Sans', sans-serif;background-color: black;border-radius: 0px">YOUR ORDERS </h2>
   </div>
     <!-- <h2 style="border-bottom: 1px solid red;padding-bottom: 50px;">TOTAL NUMBER OF ITEMS IN YOUR CART: <span style="color: red;"><%=data.length%></span></h2> -->
 		<div class="row">
@@ -35,7 +33,7 @@
                     <%if(data["status"]==="pending"){%>
                     <h2 style="text-transform: uppercase;padding-top: 10px;">ORDER STATUS: <span style="color:red"><%=data["status"]%> </span><i class="fas fa-spinner"></i></h2><%}%>
                     <%if(data["status"]==="Shipped"){%>
-                    <h2 style="text-transform: uppercase;padding-top: 10px;">ORDER STATUS: <span style="color:red"><%=data["status"]%> </span><i class="fas fa-check-double"></i></h2><%}%>
+                    <h2 style="text-transform: uppercase;padding-top: 10px;">ORDER STATUS: <span style="color:green"><%=data["status"]%> <i class="fas fa-check-double"></i></span></h2><%}%>
                   </div>
                 </div>
               </div>

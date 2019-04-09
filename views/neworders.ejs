@@ -26,8 +26,8 @@
                   
                   <div class="col-lg-6">
                     <h3><%=data["itemname"]%></h3>
-                    <h3>CUSTOMER NAME: <%=data["itemname"]%></h3>
-                    <h3>SHIPPING ADDRESS: <%=data["itemname"]%></h3>
+                    <h3>CUSTOMER NAME: <span style="color:green;letter-spacing: 0.1em"><%=data["fullname"]%></span></h3>
+                    <h3>SHIPPING ADDRESS: <span style="color:green;letter-spacing: 0.1em"><%=data["address"]%></span></h3>
                     <!-- <p>USER</p> -->
                     <h2 id="price"><span>Rs. </span><%=data["price"]%></h2>
                     <a href='/neworder/ship/<%=data["orderid"]%>' class="btn btn-success btn-block" id="temp" style="letter-spacing: 0.7em">SHIP</a>
