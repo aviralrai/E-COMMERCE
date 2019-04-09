@@ -13,4 +13,11 @@ app.get('/',(req,res)=>{
     })
 })
 
+app.get("/ship/:id",(req,res)=>{
+    var query = `update orders set status='Shipped' where orderid = ${req.params.id}`;
+    db.query(query,(err,result)=>{
+    })
+    res.redirect('/neworder');
+})
+
 module.exports = app;
