@@ -11,8 +11,11 @@
 <body id="body">
 	<%include navbar.ejs%>
 	<div class="container">
-		<h2 style="padding-top: 20px;">WELCOME <span style="color:red;"><%=user.fullname%></span></h2>
-    <h2 style="border-bottom: 1px solid red;padding-bottom: 50px;">TOTAL NUMBER OF ITEMS IN YOUR CART: <span style="color: red;"><%=data.length%></span></h2>
+		<!-- <h2 style="padding-top: 20px;"><span style="color:red;"><%=user.fullname%></span></h2> -->
+    <!-- <h2 style="border-bottom: 1px solid red;padding-bottom: 50px;">TOTAL NUMBER OF PENDING ORDERS: <span style="color: red;"><%=data.length%></span></h2> -->
+    <h2 style="padding-top: 30px;padding-bottom: 20px;color: white;letter-spacing:0.3em ;font-family: 'Josefin Sans', sans-serif;background: linear-gradient(
+    rgba(246,247,249,0.1),
+    rgba(0,0,0,0.8));border-radius: 0px">TOTAL NUMBER OF PENDING ORDERS: <%=data.length%></h2>
 		<div class="row">
    		 <% data.forEach(function(data){%>
           <div class="col-xs-12 col-lg-12 content" style="border-bottom: 1px solid grey">
@@ -27,12 +30,17 @@
                     <h3><%=data["itemname"]%></h3>
                     <p><%=data["details"]%></p>
                     <h2 id="price"><span>Rs. </span><%=data["price"]%></h2>
-                    <a href='/cart/remove/<%=data["itemid"]%>' class="btn btn-danger btn-block" id="temp" style="letter-spacing: 0.7em">REMOVE FROM CART</a>
+                    <a href='/cart/remove/<%=data["itemid"]%>' class="btn btn-success btn-block" id="temp" style="letter-spacing: 0.7em">SHIP</a>
                   </div>
                 </div>
               </div>
           </div>
    		 <%})%>
+<<<<<<< HEAD
+=======
+      </div>
+      
+>>>>>>> 5930ef6e42fcbc8f0c096f88838c9fbb897c2780
 	</div>
 
 </body>
