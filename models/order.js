@@ -28,6 +28,13 @@ app.get("/place",(req,res)=>{
         });
         return res.redirect("/order");
     })
+    var query = `delete from cart where userid = '${user.userid}'`;
+    db.query(query,(err,result)=>{
+        if(err){
+            console.log(err);
+        }else{
+        }
+    })
 })
 
 module.exports = app;
