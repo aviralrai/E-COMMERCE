@@ -1,6 +1,6 @@
 
 /*line above will vary with user*/
-create table user (userid int not NULL auto_increment,fullname varchar(50),username varchar(30),usertype varchar(10),password varchar(40),primary key(userid),UNIQUE(username));
+create table user (userid int not NULL auto_increment,fullname varchar(50),username varchar(30),usertype varchar(10),password varchar(40),address varchar(50),primary key(userid),UNIQUE(username));
 alter table user auto_increment=100;
 
 create table items (itemid int not NULL auto_increment,itemname varchar(100),seller varchar(30),sellerid int,category varchar(30),price decimal(12,2),rating decimal(2,1),details varchar(1000),link varchar(1000),primary key(itemid));
@@ -12,7 +12,7 @@ create table orders(orderid int auto_increment, userid int, itemid int, status c
 
 insert into items (itemname,seller,sellerid,category,price,rating,details,link) values
 	("MI Note 5 Pro","Saumya Prakash",109,"Phone",15000,4.6,"4 GB RAM | 64 GB ROM | 15.21 cm (5.99 inch) Full HD+ Display | 12MP + 5MP | 20MP Front Camera | 4100 mAh Battery | Qualcomm Snapdragon 636 Processor ","https://images-na.ssl-images-amazon.com/images/I/51N7nR%2BYarL._SX679_.jpg"),
-	("Iphone Xs","Samarth Vats",109,"Phone",150000,3.6,"64 GB ROM | 14.73 cm (5.8 inch) Super Retina HD Display | 12MP + 12MP | 7MP Front Camera | A12 Bionic Chip Processor","https://i.gadgets360cdn.com/products/large/1536782640_635_iphone_xs.jpg"),
+	("Iphone Xs","Samarth Vats",100,"Phone",150000,3.6,"64 GB ROM | 14.73 cm (5.8 inch) Super Retina HD Display | 12MP + 12MP | 7MP Front Camera | A12 Bionic Chip Processor","https://i.gadgets360cdn.com/products/large/1536782640_635_iphone_xs.jpg"),
 	("Realme 3","Shiv Shankar",103,"Phone",10999,4.5,"4 GB RAM | 64 GB ROM | 15.8 cm (6.22 inch) HD+ Display | 13MP + 2MP | 13MP Front Camera | 4230 mAh Battery | MediaTek Helio P70 Octa Core 2.1 GHz AI Processor ","https://www.91-cdn.com/pricebaba-images/images/product/mobile/60023/realme-3-raw-212436.jpg"),
 	("EZAR 3.0 M Running Shoes For Men (Navy)","Saumya Prakash",101,"Shoes",2149,3.9,NULL,"https://rukminim1.flixcart.com/image/880/1056/j612c280/shoe/y/z/a/ezar-3-0-m-8-adidas-tecste-silvmt-shosli-original-imaewh7h7ankd5nw.jpeg?q=50"),
 	("Samsung 192 L Direct Cool Refrigerator","Shiv Shankar",103,"Refrigerator",16290,4.5,"192.0 L : Good for couples and small families | Digital Inverter Compressor | 5 Star : For Energy savings up to 55%","https://static.digit.in/product/98ffaa527db3ccaf796b56e6b29225c005571239.jpeg"),
