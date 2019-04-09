@@ -28,14 +28,12 @@
                     <h3><%=data["itemname"]%></h3>
                     <p><%=data["details"]%></p>
                     <h2 id="price"><span>Rs. </span><%=data["price"]%></h2>
-                    <a href='/cart/remove/<%=data["itemid"]%>' class="btn btn-success btn-block" id="temp" style="letter-spacing: 0.7em">SHIP</a>
+                    <a href='/neworder/ship/<%=data["orderid"]%>' class="btn btn-success btn-block" id="temp" style="letter-spacing: 0.7em">SHIP</a>
                   </div>
                 </div>
               </div>
           </div>
    		 <%})%>
-      </div>
-      
 	</div>
 
 </body>
