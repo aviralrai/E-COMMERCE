@@ -48,7 +48,7 @@ app.post("/update",(req,res)=>{
                     }
                 })
                 break;
-            case 'addresss':
+            case 'address':
                 var query = mysql.format("update user set address=? where username=?",[body0.value,user.username]);
                 db.query(query,async function(err,result){
                     if(!result){
