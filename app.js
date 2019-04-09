@@ -37,6 +37,9 @@ app.use("/cart",cart);
 const order = require("./models/order");
 app.use("/order",order);
 
+const neworder = require("./models/neworder");
+app.use("/neworder",neworder);
+
 app.get("/home",(req,res)=>{
     var query = 'select * from items';
     db.query(query,(error,result,fields)=>{
