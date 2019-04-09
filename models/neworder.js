@@ -11,7 +11,6 @@ app.get('/',(req,res)=>{
             res.render("neworders.ejs",{data: result});
         }
     })
-
 })
 
 module.exports = app;
