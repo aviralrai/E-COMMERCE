@@ -27,19 +27,19 @@
                     <h3><%=data["itemname"]%></h3>
                     <p><%=data["details"]%></p>
                     <h2 id="price"><span>Rs. </span><%=data["price"]%></h2>
-                    <a href='/cart/remove/<%=data["itemid"]%>' class="btn btn-danger btn-block" id="temp" style="letter-spacing: 0.7em">REMOVE FROM CART</a>
+                    <a href='/cart/remove/<%=data["itemid"]%>' class="btn btn-success btn-block" id="temp" style="letter-spacing: 0.7em">SHIP</a>
                   </div>
                 </div>
               </div>
           </div>
    		 <%})%>
       </div>
-      <div style="margin-top: 100px;z-index:-1">
+      <!-- <div style="margin-top: 100px;z-index:-1">
       <%if(data.length > 0){%>
   		<h2>TOTAL AMOUNT: Rs. <%=sum%></h2>
       <a href='/cart/<%=data["itemid"]%>' class="btn btn-success" style="margin-left: 37%;text-decoration: none;width: 300px!important;letter-spacing: 0.8em;margin-top: 20px;" id="temp">BUY NOW!!</a>
       <%}%>
-    </div>
+    </div> -->
 	</div>
 
 </body>
