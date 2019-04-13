@@ -14,6 +14,7 @@ app.post("/",(req,res)=>{
             res.render("search.ejs",{data: result,error: error});
         }else{
             console.log(err);
+            res.redirect("/");
         } 
     })
 })
